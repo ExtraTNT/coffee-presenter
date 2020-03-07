@@ -1,0 +1,42 @@
+html{
+  overflow: hidden;
+}
+nav{
+  align-content: center;
+  align-items: center;
+}
+#btnArea{
+  text-align: center;
+  background-color: #222222;
+  color: #eeeeee;
+}
+#slideHolder *{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/* Default classes for Slides*/
+
+.middle{
+  margin-left: auto;
+  margin-right: auto;
+}
+.imageFrame *{
+  display:grid;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.image{
+  overflow: hidden;
+  background-position: center;
+  align-self: center;
+}
+.dark{
+  color: #eeeeee;
+  background-color: #222222;
+}

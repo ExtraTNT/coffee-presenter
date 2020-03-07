@@ -1,0 +1,27 @@
+/*this file is for use with the classes and ids form the slides -> use "[classname]slide" as classnames*/
+.contentslide li{
+  font-size: 28pt;
+  list-style: none inside none;
+  /* display: list-item; */
+}
+.contentslide {
+    margin-top: 5% !important;
+}
+
+.hovercontentslide:hover{
+  color: #ffaaaa;
+  font-size: 36pt
+}
+
+
+h1{
+  font-size: 36pt;
+}
+.mbbgslide{
+  display: block;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-image: url("../img/dnd02-3k.png");
+}
