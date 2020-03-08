@@ -1,3 +1,5 @@
+//© ExtraTNT
+//Licenc GNU GPLv3.0
 "use strict";
 const SLIDE_PATH = '../Slides';
 const NEXT_BTN = document.getElementById('nextBtn');
