@@ -6,5 +6,5 @@ installation:
  * deploy it...
 
  © 2020 by ExtraTNT\
- Licenc GNU GPLv3.0
+ Licenc GNU GPLv3.0\
 "do what you have to do with this software..."
