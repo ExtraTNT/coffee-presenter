@@ -10,6 +10,7 @@ nav{
   align-items: center;
 }
 #btnArea{
+  height: 2.5vh;
   text-align: center;
   background-color: #222222;
   color: #eeeeee;
@@ -21,7 +22,9 @@ nav{
 body{
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
+
 
 /* Default classes for Slides*/
 

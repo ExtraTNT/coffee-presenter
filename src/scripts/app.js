@@ -21,15 +21,7 @@ const prevSlide = function(){
   loadSliede(currentSlide);
   HTML.focus();
 };
-const calcHeighValue = function(){
-  let value;
-  if(navVisible){
-    value = window.innerHeight - (NAV.scrollHeight) + "px";
-  } else{
-    value = window.innerHeight + "px";
-  }
-  return value;
-}
+const calcHeighValue = () => navVisible? '97.5vh' : '100vh'
 
 const slideExpander = function(slidenr){
   try{
