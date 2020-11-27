@@ -1,5 +1,4 @@
-//© ExtraTNT
-//Licenc GNU GPLv3.0
+
 "use strict";
 const SLIDE_PATH = '../Slides';
 const NEXT_BTN = document.getElementById('nextBtn');
@@ -27,9 +26,9 @@ const slideExpander = (slidenr) => {
   try{
     let slide = document.getElementById('slide' + slidenr);
     slide.style.height = calcHeighValue();
-  } catch (error) {
-    console.log(error);
-    alert("missing: slide"+slidenr + ": on slide " + slidenr + ", id was not defined!");
+  } catch (e) {
+    console.log("missing: slide"+slidenr + ": on slide " + slidenr + ", id was not defined!");
+    SLIDE_HOLDER.innerHTML = '<div class="dark" style="height: 100%; display: grid"><h1 class="middle">⛾-presenter</h1><h2 class="middle">Error</h2><p class="middle"> Slide not found!</p></div>'
   }
 }
 
@@ -40,12 +39,11 @@ const loadSliede = (slidenr) => {
   slideExpander(slidenr);
 };
 
-const readTextFile = (file) =>
-{
-    var rawFile = new XMLHttpRequest();
+const readTextFile = (file) => {
+    const rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function (){
-      allText = '';
+    rawFile.onreadystatechange = () => {
+      allText = ''
       if(rawFile.readyState === 4 &&
         (rawFile.status === 200 || rawFile.status == 0)){
           allText = rawFile.responseText;
@@ -53,6 +51,7 @@ const readTextFile = (file) =>
     }
     rawFile.send(null);
 };
+
 //init
 if(!navVisible){
   NAV.style.display = "none";
