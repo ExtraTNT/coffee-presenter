@@ -11,37 +11,36 @@ let navVisible = true;
 let allText = '';
 let currentSlide = 0;
 
-const nextSlide = function(){
+const nextSlide = () => {
   currentSlide++;
   loadSliede(currentSlide);
   HTML.focus(); //removes the focus from the button
 };
-const prevSlide = function(){
+const prevSlide = () => {
   currentSlide--;
   loadSliede(currentSlide);
   HTML.focus();
 };
 const calcHeighValue = () => navVisible? '97.5vh' : '100vh'
 
-const slideExpander = function(slidenr){
+const slideExpander = (slidenr) => {
   try{
     let slide = document.getElementById('slide' + slidenr);
     slide.style.height = calcHeighValue();
-    // console.log(slide.style.height);
   } catch (error) {
     console.log(error);
     alert("missing: slide"+slidenr + ": on slide " + slidenr + ", id was not defined!");
   }
 }
 
-const loadSliede = function(slidenr){
+const loadSliede = (slidenr) => {
   SLIDE_HOLDER.style.height = calcHeighValue();
   readTextFile(SLIDE_PATH + '/' + slidenr + '.html');
   SLIDE_HOLDER.innerHTML = allText;
-  slideExpander(slidenr)
+  slideExpander(slidenr);
 };
 
-function readTextFile(file)
+const readTextFile = (file) =>
 {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
