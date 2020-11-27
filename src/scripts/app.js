@@ -1,4 +1,3 @@
-
 "use strict";
 const SLIDE_PATH = '../Slides';
 const NEXT_BTN = document.getElementById('nextBtn');
